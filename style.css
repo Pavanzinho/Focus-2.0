@@ -1,0 +1,278 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.hide{     
+    display: none;
+}
+
+:root
+{
+
+    font-size: 62.5%;
+}
+
+.background_darkMode{
+    background-color: black;
+    
+}
+
+.background_whiteMode{
+    background-color: white
+}
+
+.colorText_darkMode{
+    color: white;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    color: var(--text-color);
+
+}
+
+ .page /*Criei só para incluir o "header" sem precisar mexer nas dimensões do "main" */
+ 
+
+
+ /* Header que irá conter o button de darkmode */
+header{
+    display: flex;
+    justify-content: flex-end;
+    margin: 6rem 6rem 0 0;
+}
+
+header button{
+    border: none;
+    background-color: white;
+}
+
+
+
+main{
+    max-width: 26rem;
+    height: 100%;
+    margin: 10rem auto 0;
+}
+
+
+main .timer{
+    width: clamp(19rem, 19rem + 30vw, 26rem);
+    height: 10rem;
+    font-size: clamp(4.3rem, 4.3rem + 10vw, 10.6rem);
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    justify-content: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500; 
+}
+
+/* BOTÕES DO TIMER */
+
+.buttons-of-timer{
+    width:26rem    ;
+    height: 12rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    margin-top: 4rem;
+    justify-content: space-between;
+    margin-right: 0;
+}
+
+
+.buttons-of-timer  button  {
+    width: 5rem;
+    height: 5rem;
+    border: none;  
+}
+
+.buttons-of-timer button > img{
+   
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 2.4rem;
+    color: white;
+}
+
+/* Só para posicionar os buttons do timer  */
+.flex-control{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.flex-vol{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+
+/*BOTÕES DAS MÚSICAS */
+
+.buttons-of-songs-themes{
+    height: 33.3rem ;  
+    margin: 5rem auto;
+}
+.buttons-of-songs-themes button{  
+    border: none;
+    border-radius: 2.4rem;   
+}
+
+
+.songs-line-1{
+    display: flex;
+    justify-content: space-between;
+    height: 15rem;
+}
+
+.songs-line-2{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    height: 15rem;
+}
+
+.forest-theme,
+.rain-theme,
+.coffe-theme,
+.fireplace-theme{
+    background-color: rgb(109, 104, 104);
+    width: 10rem;
+}
+
+input{
+    margin-top: 3.2rem;
+    width: 9rem;
+    height: 1.6rem;
+    color: black;
+}
+
+
+.button-after-click{
+    background-color: brown;    
+}
+
+
+
+.buttons-of-songs-themes button img {
+    width: 5rem;
+    height: 5rem;
+    filter: opacity(0.5) drop-shadow(0 0 0 black)
+}
+
+footer{
+    display: flex;
+    justify-content: flex-end;
+    margin: 4rem 3rem  0;
+}
+
+footer button{
+    width: 6rem;
+    height: 6rem;
+    background: black;
+    border-radius: 1rem;
+    border: none;
+}
+footer button img{
+    width: 6rem;
+    height: 6rem;
+}
+.mute:hover{
+    border: 2px red solid;
+    box-sizing: border-box;
+}
+.muteAfterClick{
+    border: 2px red solid;
+    box-sizing: border-box;
+}
+
+
+@media (min-width:700px )
+{
+    main {
+        
+        margin:19.6rem auto 0;
+        min-width: 70rem;
+        max-width: 82.1rem;
+        height: 40rem;
+        display: flex;
+
+    }
+    main .container-timer{
+        margin-right: 6rem;
+        margin-left: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    
+    main .timer {
+        
+        margin: 0;
+        width: 32rem;
+        height: 13rem;
+        padding-top:2rem ;
+    }
+    main .buttons-of-timer{
+        display:flex ;
+        flex-direction: row;
+        height: 4.8rem;
+        width: 32rem;
+        margin-top: 4.8rem; 
+        gap:4rem;
+       
+    }
+    main .buttons-of-timer button{
+        border-radius: 10px;
+    }
+
+    main .flex-control{
+        display: flex;
+        gap: 4rem;
+    }
+    main .flex-vol{
+        display: flex;
+        gap: 4rem;
+    }
+
+    main .buttons-of-songs-themes{
+        margin-right: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+        width: 33.6rem;
+    
+    }
+    .buttons-of-songs-themes .songs-line-1{
+        display: flex;
+        gap: 3.2rem
+    }
+    .buttons-of-songs-themes .songs-line-2{
+        margin-top: 0;
+        gap: 3.2rem
+    }
+    
+    
+    .buttons-of-songs-themes button{
+        height: 15.2rem;
+        width: 13.8rem;
+    }
+}
+
+@media (min-width:1000px ){
+    main .container-timer{
+        margin-right: 19.2rem;
+    }  
+} 
+
+
+
